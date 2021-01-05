@@ -4,6 +4,7 @@ This is a simple Next.js project that allows a user to play rock paper scissors 
 Right now it does not work as intended, as the computer always wins!
 
 Add the game logic to finish the project. 
+
 Game logic can simply be added to `pages/api/rounds/_helpers.js` but you may structure and refactor the existing project however you see fit.
 
 Game UI code can be added to `pages/game/index.js`
