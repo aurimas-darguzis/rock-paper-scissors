@@ -1,3 +1,43 @@
+# Rock, Paper, Scissors Challange
+
+This is a simple Next.js project that allows a user to play rock paper scissors against a computer that selects its own gesture at random.
+Right now it does not work as intended, as the computer always wins!
+
+Add the game logic to finish the project. This can simply be added to `pages/api/rounds/_helpers.js` but you may structure and refactor the existing project however you see fit.
+
+logic:
+- Paper beats Rock
+- Rock beats Scissors
+- Scissors beats Paper
+
+
+BDD Acceptance Criterion
+
+```
+AS A Player
+WHEN I click a gesture
+THEN a round is played against the computer
+AND I see a message telling me who won (the player or the computer)
+```
+
+### optional
+extend the rules to include lizard and spock
+
+logic:
+- Scissors beats Paper
+- Paper beats Rock
+- Rock beats Lizard
+- Lizard beats Spock
+- Spock beats Scissors
+- Scissors beats Lizard
+- Lizard beats Paper
+- Paper beats Spock
+- Spock beats Rock
+- Rock beats Scissors
+
+Feel free to add tests, styles and refactor as you wish, however please do not spend more than a few hours on this challenge.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -26,9 +66,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
