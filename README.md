@@ -37,6 +37,8 @@ logic:
 
 Feel free to add tests, styles and refactor as you wish, however please do not spend more than a few hours on this challenge.
 
+---
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
