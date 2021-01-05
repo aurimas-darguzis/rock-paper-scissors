@@ -21,7 +21,16 @@ BDD Acceptance Criteria
 AS A Player
 WHEN I click a gesture from tthe game logic
 THEN a round is played against the computer
+AND the gesture the computer picks is not the same as mine
 AND I see a message telling me who won (the player or the computer)
+```
+
+```
+AS A Player
+WHEN I click a gesture from the game logic
+THEN a round is played against the computer
+AND the gesture the computer picks is the same as mine
+AND I see a message telling me that the game was a draw
 ```
 
 ```
