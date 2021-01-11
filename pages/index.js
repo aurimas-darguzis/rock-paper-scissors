@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,9 +9,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Rock Paper Scissors</h1>
-        <Link href="/game" to="/game">Play!</Link>
+        <h1 data-testid="app-header">Rock Paper Scissors</h1>
+        <Link href="/game" to="/game">
+          Play!
+        </Link>
       </main>
     </div>
-  )
+  );
 }
