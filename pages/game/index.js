@@ -5,12 +5,24 @@ import styles from "../../styles/Game.module.css";
 
 const Game = () => {
   const [winner, setWinner] = useState(null);
+  const [error, setError] = useState(null);
 
   const playGame = (gesture) => {
-    play(gesture).then((results) => {
-      setWinner(results.winner);
-    });
+    play(gesture)
+      .then((results) => {
+        setError(null);
+        setWinner(results.winner);
+      })
+      .catch(() => setError(true));
   };
+
+  if (error) {
+    return (
+      <div>
+        something went wrong :( <br /> please refresh the page
+      </div>
+    );
+  }
 
   if (winner)
     return (
@@ -22,8 +34,12 @@ const Game = () => {
     );
 
   return (
-    <div className={styles.container}>
-      <button className={styles.button} onClick={() => playGame(rock)}>
+    <div className={styles.container} data-testid="game-container">
+      <button
+        data-testid="rock-button"
+        className={styles.button}
+        onClick={() => playGame(rock)}
+      >
         rock
       </button>
       <button className={styles.button} onClick={() => playGame(paper)}>
