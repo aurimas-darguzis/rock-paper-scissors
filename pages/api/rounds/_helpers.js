@@ -5,8 +5,8 @@ export const playGame = ({ playerGesture }) => {
     throw new Error("Player Gesture does not exist!");
   }
 
-  const ComputerGesture = gestures[Math.floor(Math.random() * gestures.length)];
+  const computerGesture = gestures[Math.floor(Math.random() * gestures.length)];
 
-  const winner = state[playerGesture][ComputerGesture];
+  const winner = state[playerGesture][computerGesture];
   return { winner };
 };
