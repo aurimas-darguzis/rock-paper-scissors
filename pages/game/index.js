@@ -3,7 +3,7 @@ import { play } from "./_helpers.js";
 import { rock, paper, scissors, spock, lizard } from "../../constants/index";
 import styles from "../../styles/Game.module.css";
 
-export default () => {
+const Game = () => {
   const [winner, setWinner] = useState(null);
 
   const playGame = (gesture) => {
@@ -41,3 +41,5 @@ export default () => {
     </div>
   );
 };
+
+export default Game;
