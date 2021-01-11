@@ -8,7 +8,6 @@ const Game = () => {
 
   const playGame = (gesture) => {
     play(gesture).then((results) => {
-      console.log("**** ", results.winner);
       setWinner(results.winner);
     });
   };
