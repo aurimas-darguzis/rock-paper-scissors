@@ -5,12 +5,24 @@ import styles from "../../styles/Game.module.css";
 
 const Game = () => {
   const [winner, setWinner] = useState(null);
+  const [error, setError] = useState(null);
 
   const playGame = (gesture) => {
-    play(gesture).then((results) => {
-      setWinner(results.winner);
-    });
+    play(gesture)
+      .then((results) => {
+        setError(null);
+        setWinner(results.winner);
+      })
+      .catch(() => setError(true));
   };
+
+  if (error) {
+    return (
+      <div>
+        something went wrong :( <br /> please refresh the page
+      </div>
+    );
+  }
 
   if (winner)
     return (
