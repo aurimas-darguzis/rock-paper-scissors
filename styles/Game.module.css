@@ -11,6 +11,11 @@
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 7px 7px 12px #e6e6e6, -7px -7px 12px #ffffff;
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .button:active {

@@ -8,6 +8,7 @@ const Game = () => {
 
   const playGame = (gesture) => {
     play(gesture).then((results) => {
+      console.log("**** ", results.winner);
       setWinner(results.winner);
     });
   };
@@ -22,8 +23,12 @@ const Game = () => {
     );
 
   return (
-    <div className={styles.container}>
-      <button className={styles.button} onClick={() => playGame(rock)}>
+    <div className={styles.container} data-testid="game-container">
+      <button
+        data-testid="rock-button"
+        className={styles.button}
+        onClick={() => playGame(rock)}
+      >
         rock
       </button>
       <button className={styles.button} onClick={() => playGame(paper)}>
